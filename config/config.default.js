@@ -30,7 +30,19 @@ module.exports = appInfo => {
     ua: [
       /Baiduspider/i,
     ]
-  }
+  };
+
+  // cache
+  config.cache = {
+    default: 'memory',
+    stories: {
+      memory: {
+        driver: 'memory',
+        max: 100,
+        ttl: 0,
+      }
+    }
+  };
 
   return config;
 };

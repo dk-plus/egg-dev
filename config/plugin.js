@@ -7,3 +7,8 @@ exports.nunjucks = {
   enabled: true,
   package: 'egg-view-nunjucks',
 };
+
+exports.cache = {
+  enabled: true,
+  package: 'egg-cache',
+};

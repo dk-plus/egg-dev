@@ -14,6 +14,8 @@
       </li>
     {% endfor %}
     </ul>
+    <p>{{info.returnValue.content.id}}</p>
+    <p>{{info.returnValue.content.name}}</p>
     <script src="/public/js/index.js"></script>
   </body>
 </html>
