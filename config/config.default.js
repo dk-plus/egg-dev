@@ -8,7 +8,8 @@ module.exports = appInfo => {
 
   // add your config here
   config.middleware = [
-    'robot',
+    'robot', 
+    // 'gzip',
   ];
 
   // view engine
@@ -32,6 +33,11 @@ module.exports = appInfo => {
     ]
   };
 
+  // gzip
+  // config.gzip = {
+  //   threshold: 1024,
+  // };
+
   // cache
   config.cache = {
     default: 'memory',
@@ -42,6 +48,10 @@ module.exports = appInfo => {
         ttl: 0,
       }
     }
+  };
+
+  config.security = {
+    csrf: false,
   };
 
   return config;

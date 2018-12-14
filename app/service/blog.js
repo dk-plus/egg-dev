@@ -5,7 +5,8 @@ const Service = require('egg').Service;
 class BlogService extends Service {
   async list() {
     const { addr, title } = this.config.blog;
-    const { id } = this.ctx.query;
+    // const { id } = this.ctx.query;
+    const { id } = this.ctx.params;
     const data = [ 1, 2, 3, 4 ];
     const blogList = data.map(item => ({
       title: `blog_${item}_${id}`,
