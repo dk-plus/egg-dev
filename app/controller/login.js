@@ -3,10 +3,13 @@
 const Controller = require('egg').Controller;
 
 class LoginController extends Controller {
-  async login() {
+  async index() {
     const { ctx } = this;
-    await ctx.render('login.tpl', {title: 'login user'});
+    await ctx.render('login.tpl', {
+      target: '/login',
+    });
   }
+
   async user() {
     const { ctx } = this;
     console.log(ctx.request.body)

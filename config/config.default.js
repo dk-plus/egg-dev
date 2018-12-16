@@ -22,8 +22,8 @@ module.exports = appInfo => {
 
   // blog config
   config.blog = {
-    addr: '/blog',
-    title: '我的博客',
+    name: 'dkplus',
+    author: 'dk',
   };
 
   // robot

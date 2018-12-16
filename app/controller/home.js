@@ -4,9 +4,17 @@ const Controller = require('egg').Controller;
 
 class HomeController extends Controller {
   async index() {
-    const { title } = this.config.blog;
-    const { id } = this.ctx.query;
-    this.ctx.body = `hello world ${title}. userId: ${id}`;
+    const { name, author } = this.config.blog;
+    const { ctx } = this;
+    await ctx.render('home.tpl', {
+      name,
+      author,
+      urls: [
+        '/',
+        '/blogs',
+        '/about',
+      ],
+    });
   }
 }
 
