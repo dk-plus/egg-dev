@@ -2,6 +2,6 @@
 
 {% block content %}
 <div>
-{{id}}
+文章{{id}}
 </div>
 {% endblock %}

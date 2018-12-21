@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Blog</title>
+    <title>{{title}}</title>
     <link rel="stylesheet" href="/public/css/index.css" />
   </head>
   <body>

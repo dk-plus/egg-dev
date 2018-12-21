@@ -10,6 +10,7 @@ module.exports = appInfo => {
   config.middleware = [
     'robot', 
     // 'gzip',
+    'user',
   ];
 
   // view engine
@@ -37,6 +38,13 @@ module.exports = appInfo => {
   // config.gzip = {
   //   threshold: 1024,
   // };
+
+  config.user = {
+    whiteList: [
+      /\/public/,
+      /\/login/,
+    ]
+  };
 
   // cache
   config.cache = {
